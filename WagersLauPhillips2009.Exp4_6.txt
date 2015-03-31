@@ -1,0 +1,288 @@
+# PPMOD 1 a
+The slogan on the poster was designed to get attention.
+? Did the poster contain an attention-getting slogan? Y
+# PPMOD 1 b
+The slogan on the posters was designed to get attention.
+? Were the posters only covered with images? N
+# PPMOD 1 c
+The slogan on the poster were designed to get attention.
+? Did the poster contain an attention-getting slogan? Y
+# PPMOD 1 d
+The slogan on the posters were designed to get attention.
+? Were the posters only covered with images? N
+# PPMOD 2 a
+The picture on the flier was of a village church in the south of France.
+? Did the flier picture an old French castle? N
+# PPMOD 2 b
+The picture on the fliers was of a village church in the south of France.
+? Did the fliers picture a French church? Y
+# PPMOD 2 c
+The picture on the flier were of a village church in the south of France.
+? Did the flier picture an old French castle? N
+# PPMOD 2 d
+The picture on the fliers were of a village church in the south of France.
+? Did the fliers picture a French church? Y
+# PPMOD 3 a
+The mistake in the program was disastrous for the small software company.
+? Did the small software company's program contain a mistake? Y
+# PPMOD 3 b
+The mistake in the programs was disastrous for the small software company.
+? Did the small software company's programs contain a mistake? Y
+# PPMOD 3 c
+The mistake in the program were disastrous for the small software company.
+? Did the small software company's program contain a mistake? Y
+# PPMOD 3 d
+The mistake in the programs were disastrous for the small software company.
+? Did the small software company's programs contain a mistake? Y
+# PPMOD 4 a
+The label on the container was a warning about the hazardous chemicals inside.
+? Was the hazardous chemical container unlabeled? N
+# PPMOD 4 b
+The label on the containers was a warning about the hazardous chemicals inside.
+? Were the hazardous chemical containers unlabeled? N
+# PPMOD 4 c
+The label on the container were a warning about the hazardous chemicals inside.
+? Was the hazardous chemical container unlabeled? N
+# PPMOD 4 d
+The label on the containers were a warning about the hazardous chemicals inside.
+? Were the hazardous chemical containers unlabeled? N
+# PPMOD 5 a
+The problem in the store was solved by firing the assistant manager.
+? Did the assistant manager lose her job? Y
+# PPMOD 5 b
+The problem in the stores was solved by firing the assistant manager.
+? Did the assistant manager lose her job? Y
+# PPMOD 5 c
+The problem in the store were solved by firing the assistant manager.
+? Did the assistant manager keep her job? N
+# PPMOD 5 d
+The problem in the stores were solved by firing the assistant manager.
+? Did the assistant manager keep her job? N
+# PPMOD 6 a
+The name on the billboard was of a prominent local politician.
+? Was the politician's name written on the side of a bus? N
+# PPMOD 6 b
+The name on the billboards was of a prominent local politician.
+? Was the politician's name written on the side of a bus? N
+# PPMOD 6 c
+The name on the billboard were of a prominent local politician.
+? Was the politician's name written on a billboard? Y
+# PPMOD 6 d
+The name on the billboards were of a prominent local politician.
+? Was the politician's name written on billboards? Y
+# PPMOD 7 a
+The crime in the suburb was a reflection of the violence in today's society.
+? Is societal violence reflected by suburban crime? Y
+# PPMOD 7 b
+The crime in the suburbs was a reflection of the violence in today's society.
+? Is societal violence reflected by rural crime? N
+# PPMOD 7 c
+The crime in the suburb were a reflection of the violence in today's society.
+? Is societal violence reflected by rural crime? N
+# PPMOD 7 d
+The crime in the suburbs were a reflection of the violence in today's society.
+? Is societal violence reflected by suburban crime? Y
+# PPMOD 8 a
+The defect in the appliance was unknown to consumers and government regulators.
+? Did government regulators conceal the defect in the appliance? N
+# PPMOD 8 b
+The defect in the appliances was unknown to consumers and government regulators.
+? Were both consumers and regulators unaware of the defect? Y
+# PPMOD 8 c
+The defect in the appliance were unknown to consumers and government regulators.
+? Were both consumers and regulators unaware of the defect? Y
+# PPMOD 8 d
+The defect in the appliances were unknown to consumers and government regulators.
+? Did government regulators conceal the defect in the appliances? N
+# PPMOD 9 a
+The citation on the notecard was quite difficult to track down using the library's limited resources.
+? Did the library's limited resources make it hard to find the citation? Y
+# PPMOD 9 b
+The citation on the notecards was quite difficult to track down using the library's limited resources.
+? Did the library have considerable resources? N
+# PPMOD 9 c
+The citation on the notecard were quite difficult to track down using the library's limited resources.
+? Did the library's limit resources make it hard to find the citation? Y
+# PPMOD 9 d
+The citation on the notecards were quite difficult to track down using the library's limited resources.
+? Did the library have considerable resources? N
+# PPMOD 10 a
+The advertisement on the skyscraper was hard to read except from a long distance away.
+? Was there a large advertisement on a blimp? N
+# PPMOD 10 b
+The advertisement on the skyscrapers was hard to read except from a long distance away.
+? Was there a large advertisement on the skyscrapers? Y
+# PPMOD 10 c
+The advertisement on the skyscraper were hard to read except from a long distance away.
+? Was there a large advertisement on a blimp? N
+# PPMOD 10 d
+The advertisement on the skyscrapers were hard to read except from a long distance away.
+? Was there a large advertisement on the skyscrapers? Y
+# PPMOD 11 a
+The traitor in the camp was passing information to the enemy through various secret methods.
+? Were there any traitors in the camp? Y
+# PPMOD 11 b
+The traitor in the camps was passing information to the enemy through various secret methods.
+? Were there any traitors in the camps? Y
+# PPMOD 11 c
+The traitor in the camp were passing information to the enemy through various secret methods.
+? Were there any traitors in the camp? Y
+# PPMOD 11 d
+The traitor in the camps were passing information to the enemy through various secret methods.
+? Were there any traitors in the camps? Y
+# PPMOD 12 a
+The flaw in the argument was clear to everyone in the lecture hall after just five minutes.
+? Did the argument's flaw escape anyone in the lecture hall? N
+# PPMOD 12 b
+The flaw in the arguments was clear to everyone in the lecture hall after just five minutes.
+? Did the arguments' flaw escape anyone in the lecture hall? N
+# PPMOD 12 c
+The flaw in the argument were clear to everyone in the lecture hall after just five minutes.
+? Did the argument's flaw escape anyone in the lecture hall? N
+# PPMOD 12 d
+The flaw in the arguments were clear to everyone in the lecture hall after just five minutes.
+? Did the arguments' flaw escape anyone in the lecture hall? N
+# PPMOD 13 a
+The door to the laboratory was left unlocked accidentally by the cleaning service.
+? Did the cleaners fail to lock the lab door? Y
+# PPMOD 13 b
+The door to the laboratories was left unlocked accidentally by the cleaning service.
+? Did the cleaners fail to lock the lab doors? Y
+# PPMOD 13 c
+The door to the laboratory were left unlocked accidentally by the cleaning service.
+? Did the cleaners remember to lock the lab door? N
+# PPMOD 13 d
+The door to the laboratories were left unlocked accidentally by the cleaning service.
+? Did the cleaners remember to lock the lab doors? N
+# PPMOD 14 a
+The memo from the contractor was about the delinquent tax return.
+? Was the memo from the accountant? N
+# PPMOD 14 b
+The memo from the contractors was about the delinquent tax return.
+? Was the memo from the accountants? N
+# PPMOD 14 c
+The memo from the contractor were about the delinquent tax return.
+? Was the memo from the contractor? Y
+# PPMOD 14 d
+The memo from the contractors were about the delinquent tax return.
+? Was the memo from the contractors? Y
+# PPMOD 15 a
+The check from the stockbroker was a dividend on a long-term bond.
+? Did the stockbroker send a check? Y
+# PPMOD 15 b
+The check from the stockbrokers was a dividend on a long-term bond.
+? Did the stockbrokers send cash? N
+# PPMOD 15 c
+The check from the stockbroker were a dividend on a long-term bond.
+? Did the stockbroker send cash? N
+# PPMOD 15 d
+The check from the stockbrokers were a dividend on a long-term bond.
+? Did the stockbrokers send a check? Y
+# PPMOD 16 a
+The key to the cell was rusty from many years of disuse.
+? Was the key to the cell used frequently? N
+# PPMOD 16 b
+The key to the cells was rusty from many years of disuse.
+? Had the key grown rusty? Y
+# PPMOD 16 c
+The key to the cell were rusty from many years of disuse.
+? Had the key grown rusty? Y
+# PPMOD 16 d
+The key to the cells were rusty from many years of disuse.
+? Was the key to the cells used frequently? N
+# PPMOD 17 a
+The letter from the investigator was received in San Francisco in late March.
+? Did the letter arrive in the spring? Y
+# PPMOD 17 b
+The letter from the investigators was received in San Francisco in late March.
+? Did the letter arrive in the fall? N
+# PPMOD 17 c
+The letter from the investigator were received in San Francisco in late March.
+? Did the letter arrive in the spring? Y
+# PPMOD 17 d
+The letter from the investigators were received in San Francisco in late March.
+? Did the letter arrive in the fall? N
+# PPMOD 18 a
+The entrance to the exhibit was hard to locate on the diagram.
+? Was the exhibit entrance clearly indicated on the diagram? N
+# PPMOD 18 b
+The entrance to the exhibits was hard to locate on the diagram.
+? Was the exhibit entrance difficult to find on the diagram? Y
+# PPMOD 18 c
+The entrance to the exhibit were hard to locate on the diagram.
+? Was the exhibit entrance clearly indicated on the diagram? N
+# PPMOD 18 d
+The entrance to the exhibits were hard to locate on the diagram.
+? Was the exhibit entrance difficult to find on the diagram? Y
+# PPMOD 19 a
+The warning from the expert was a shock to the residents of the city.
+? Were the city residents surprised at the warning? Y
+# PPMOD 19 b
+The warning from the experts was a shock to the residents of the city.
+? Were the city residents surprised at the warning? Y
+# PPMOD 19 c
+The warning from the expert were a shock to the residents of the city.
+? Were the city residents surprised at the warning? Y
+# PPMOD 19 d
+The warning from the experts were a shock to the residents of the city.
+? Were the city residents surprised at the warning? Y
+# PPMOD 20 a
+The bridge to the island was about ten miles off the main highway.
+? Was the bridge located immediately off the highway? N
+# PPMOD 20 b
+The bridge to the islands was about ten miles off the main highway.
+? Was the bridge located immediately off the highway? N
+# PPMOD 20 c
+The bridge to the island were about ten miles off the main highway.
+? Was the bridge located immediately off the highway? N
+# PPMOD 20 d
+The bridge to the islands were about ten miles off the main highway.
+? Was the bridge located immediately off the highway? N	
+# PPMOD 21 a	
+The gift from the visitor was a beautiful clock from Germany.	
+? Did the visitor's gift come from Germany? Y	
+# PPMOD 21 b	
+The gift from the visitors was a beautiful clock from Germany.	
+? Did the visitors' gift come from Germany? Y	
+# PPMOD 21 c	
+The gift from the visitor were a beautiful clock from Germany.	
+? Did the visitor's gift come from Italy? N	
+# PPMOD 21 d	
+The gift from the visitors were a beautiful clock from Germany.	
+? Did the visitors' gift come from Italy? N	
+# PPMOD 22 a	
+The path to the monument was lined with lovely trees and flowers.	
+? Did the path to the monument have an unlandscaped border? N	
+# PPMOD 22 b	
+The path to the monuments was lined with lovely trees and flowers.	
+? Did the path to the monuments have an unlandscaped border? N	
+# PPMOD 22 c	
+The path to the monument were lined with lovely trees and flowers.	
+? Did trees border on the path to the monument? Y	
+# PPMOD 22 d	
+The path to the monuments were lined with lovely trees and flowers.	
+? Did trees border on the path to the monuments? Y	
+# PPMOD 23 a	
+The message from the engineer was about the recent weakening to the building's structural supports.	
+? Was the engineer aware of the recent weakening of the supports? Y	
+# PPMOD 23 b	
+The message from the engineers was about the recent weakening to the building's structural supports.	
+? Were the engineers unaware of the recent weakening of the supports? N	
+# PPMOD 23 c	
+The message from the engineer were about the recent weakening to the building's structural supports.
+? Was the engineer unaware of the recent weakening of the supports? N
+# PPMOD 23 d
+The message from the engineers were about the recent weakening to the building's structural supports.
+? Were the engineers aware of the recent weakening of the supports? Y
+# PPMOD 24 a
+The gate to the pasture was gradually falling down due to disrepair.
+? Was the pasture gate well maintained? N
+# PPMOD 24 b
+The gate to the pastures was gradually falling down due to disrepair.
+? Was the pasture gate in need of repair? Y
+# PPMOD 24 c
+The gate to the pasture were gradually falling down due to disrepair.
+? Was the pasture gate in need of repair? Y
+# PPMOD 24 d
+The gate to the pastures were gradually falling down due to disrepair.
+? Was the pasture gate well maintained? N	

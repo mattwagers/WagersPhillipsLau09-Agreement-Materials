@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1447682462524.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "41008A7",
+    "lastKnownWriteTime" : 1447682304,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "ardu0ulrhw",
+        "caption" : "exp1.target",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=exp1.target&cache_key=ardu0ulrhw",
+        "displayedObservations" : 11195,
+        "environment" : "",
+        "object" : "exp1.target",
+        "totalObservations" : 11195,
+        "variables" : 13
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

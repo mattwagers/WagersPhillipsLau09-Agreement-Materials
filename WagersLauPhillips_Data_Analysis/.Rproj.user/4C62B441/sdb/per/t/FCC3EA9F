@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1447681236214.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "FCC3EA9F",
+    "lastKnownWriteTime" : 0,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "0a47x2hy8b",
+        "caption" : "Experiment1",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=Experiment1&cache_key=0a47x2hy8b",
+        "displayedObservations" : "11694",
+        "environment" : "",
+        "object" : "Experiment1",
+        "totalObservations" : "11694",
+        "variables" : "11"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

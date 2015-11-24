@@ -1,0 +1,216 @@
+---
+title: "Wagers, Lau & Phillips (2009) Analysis Transcript"
+output: 
+  html_document:
+    toc: true
+    theme: united
+---
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>. You can access the source HERE.
+
+```{r prepareWorkSpace, cache=FALSE}
+# Load all data
+load("WagersLauPhillips.rawdata.Rdata")
+
+# Libraries
+library(magrittr)
+library(lme4)
+library(gplots)
+library(knitr)
+
+# Analysis wide options and helper functions
+options(digits=3)
+
+stderr <- function(x){ sd(x, na.rm=TRUE) / sqrt(length(x[!is.na(x)])) }
+
+shaveHalfPercentile <- function(df, verbose=FALSE){
+  RT_bounds <- quantile(df$RT, c(0.005, 0.995))
+  shaved <- subset(df, RT >= RT_bounds[1] & RT < RT_bounds[2])
+  range(df$RT) %>%
+    paste(collapse="-") %>%
+    paste("Original range (ms):", .) %>%
+    message
+  
+  range(shaved$RT) %>%
+    paste(collapse="-") %>%
+    paste("Shaved range (ms):", .) %>%
+    message
+  
+  return(shaved)
+}
+
+excludeIncorrectTrials <- function(df){
+  correct_only <- subset(df, QPCT==100)
+  return(correct_only)
+}
+
+unstressModel <- function(fm){
+  resid(fm) %>%
+    scale %>%
+    abs -> scaled_residuals
+  
+  keep.these.obs <- which(scaled_residuals < 3)
+  stressors <- which(scaled_residuals >=3)
+  return(list(keep.these.obs, stressors))
+}
+
+pairPlot <- function(means.table, se.table, range.x, range.y=c(-999,-999), 
+                     par.pch=20, legend.labels){
+  if(range.y[1]==-999){
+    range.y <- range(means.table)
+    range.y <- 50*(range.y%/%50 + c(-1,1)) 
+  }
+  
+  plotCI(range.x, means.table[1, range.x],
+         uiw = se.table[1, range.x], gap=0, ylim=range.y,
+         type='b', pch=par.pch, pt.bg="black", cex=1.5, 
+         bty='n', ylab="RT (ms)", xlab="Region")
+  
+#  grid()
+
+  plotCI(range.x, means.table[2, range.x], add=1,
+         uiw = se.table[2, range.x], gap=0,
+         type='b', pch=par.pch, pt.bg="white", cex=1.5)
+  
+  if(!is.null(legend.labels)){
+      legend(x="topright", legend = legend.labels, fill=c("black","white"), bty='n')
+  }
+}
+```
+
+# Experiment 1
+
+```
+The old key/s unsurprisingly was/were rusty from many years of disuse
+The old key/s unsurprisingly were/was rusty from many years of disuse
+```
+
+```{r exp1::prepareData, cache=TRUE, echo=FALSE}
+
+relabelExperiment1 <- function(df){
+  df$SubjectNumber <- df$Condition
+  levels(df$SubjectNumber) <- c(rep("sg", 2),
+                                rep("pl", 2))
+  contrasts(df$SubjectNumber) <- -contr.sum(2)/2
+
+  df$Grammaticality <- df$Condition
+  levels(df$Grammaticality) <- c("gr", "un", "un", "gr")
+  contrasts(df$Grammaticality) <- -contr.sum(2)/2
+  
+  df$Correct <- df$QPCT/100
+
+  return(df)
+}
+
+relabelExperiment1(Experiment1) -> Experiment1
+shaveHalfPercentile(Experiment1, verbose=TRUE) %>%
+  excludeIncorrectTrials -> exp1.target
+```
+
+### Exp. 1 :: Accuracy
+
+```{r exp1:summarizeAccuracy, echo=FALSE}
+Experiment1 %$%
+  tapply(Correct, list(Grammaticality, SubjectNumber), mean) ->
+  exp1_accuracy.table
+
+kable(100*exp1_accuracy.table, caption="Experiment 1 Accuracy by Condition", format="pandoc")
+```
+
+There *is* a small effect of Grammaticality.
+
+```{r exp1:modelAccuracy, echo=FALSE}
+
+
+exp1_acc.fm0 <- glmer(Correct ~ Grammaticality*SubjectNumber + (1|Subj) + (1|Item), 
+      data = subset(Experiment1, Region==1), family=binomial)
+summary(exp1_acc.fm0)
+```
+
+```{r exp1::summarizeWordByWord, echo=FALSE}
+exp1.target %$%
+  tapply(RT, list(Grammaticality, Region, SubjectNumber), mean) -> 
+  region_means.table
+
+# Use participant-wise standard errors
+exp1.target %$%
+  tapply(RT, list(Grammaticality, Region, SubjectNumber, Subj), mean) -> regionxsubj_means.table
+
+apply(regionxsubj_means.table, c(1,2,3), stderr) -> region_se.table
+```
+
+### Exp. 1 :: Reading Times
+
+```{r exp1::printRT_Tables, echo=FALSE}
+range.x <- 1:14
+kable(region_means.table[,range.x,'sg'], 
+      caption="Singular subjects; (ms)")
+kable(region_means.table[,range.x,'pl'], 
+      caption="Plural subjects; (ms)")
+```
+
+```{r exp1::visualizeWordByWord, echo=FALSE}
+par(mfrow=c(2,1), mar=c(4,4,3,0))
+pairPlot(region_means.table[,,'sg'], region_se.table[,,'sg'], 
+         range.x = 1:14, range.y = c(250,600), par.pch = 21,
+         legend.labels = c("grammatical", "ungrammatical"))
+title(main="Singular subjects")
+pairPlot(region_means.table[,,'pl'], region_se.table[,,'pl'], 
+         range.x = 1:14, range.y = c(250,600), par.pch = 22,
+         legend.labels = NULL)
+title(main="Plural subjects")
+
+message("Plotted standard errors calculated over per-participant means")
+
+```
+
+## Experiment1 Verb
+
+**Claim**: Ungrammatical sentences take longer to read on the verb.
+
+```{r exp1:modelWordRegion_verb, cache=TRUE}
+woi <- 5
+doi <- subset(exp1.target, Region==woi)
+
+exp1.formula <- as.formula("RT ~ SubjectNumber*Grammaticality + (SubjectNumber*Grammaticality|Subj) + (SubjectNumber*Grammaticality|Item)")
+
+verb.fm0 <- lmer(exp1.formula, data=doi)
+verb.fm1 <- update(verb.fm0, 
+                   data=doi[unstressModel(verb.fm0)[[1]], ])
+
+summary(verb.fm0)
+summary(verb.fm1)
+with(doi[unstressModel(verb.fm0)[[1]], ],
+     interaction.plot(SubjectNumber, Grammaticality, RT),
+     ylim=c(400,525))
+
+#par(mfcol=c(1,1), mar=c(4,4,3,3))
+#qqnorm(resid(verb.fm0))
+#qqnorm(resid(verb.fm1))
+```
+
+
+## Experiment1 Adverb
+
+Claim (@): Plurals take longer to process, reflected by an effect of complexity on the following region (adverb).
+
+```{r exp1:modelWordRegion_adv, cache=TRUE}
+# Convergence problem with fully-saturated model;
+# This steps off Num*Gram interaction within-subject
+# To Num+Gram within-subject
+
+exp1.formula.sA_B <- as.formula("RT ~ SubjectNumber*Grammaticality + (SubjectNumber+Grammaticality|Subj) + (SubjectNumber*Grammaticality|Item)")
+
+woi <- 4
+doi <- subset(exp1.target, Region==woi)
+adverb.fm0 <- lmer(exp1.formula.sA_B, data=doi)
+adverb.fm1 <- update(adverb.fm0,
+                     data=doi[unstressModel(adverb.fm0)[[1]], ])
+summary(adverb.fm0)
+summary(adverb.fm1)
+
+with(doi[unstressModel(adverb.fm0)[[1]], ],
+     interaction.plot(Grammaticality, SubjectNumber, RT),
+     ylim=c(400,525))
+```
+

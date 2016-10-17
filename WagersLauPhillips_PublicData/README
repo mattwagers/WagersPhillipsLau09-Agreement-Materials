@@ -1,0 +1,112 @@
+# README
+## Wagers, Lau, & Phillips (2009) Public Data 
+
+This archive contains reading-time data from the six experiments reported in 
+
+> Wagers, M., Lau, E., Phillips, C. (2009). Agreement attraction in comprehension: representations and processes. *Journal of Memory and Language, 61*, 206-237. [DOI:10.1016/j.jml.2009.04.002](http://www.sciencedirect.com/science/article/pii/S0749596X09000448).
+
+The data are stored in six `CSV` files, one each for the correspondingly-numbered experiment in the paper. There is also an `Rdata` file which can be opened directly in the R Environment: it contains six dataframes, named Experiment{1-6}.
+
+The column names are exactly the variables defined by the [Linger](http://tedlab.mit.edu/~dr/Linger/) platform (Version 2.94; Rohde, 2003). Each row corresponds to the reading time for a single region, which in these experiments always corresponded to a word. The reading-time and question-answering data have not been separately collated. If you wish to analyze question-answering accuracy, extract only the trials for Region 1 and compute over the QPCT column.
+
+## Experiment 1: S-V agreement with no distractors
+
+The design is <span style="font-variant:small-caps;">Grammaticality</span> &times; <span style="font-variant:small-caps;">SubjectNumber</span>.
+
+- Critical regions:
+    - 3: subject head
+    - 4: spill-over adverb
+    - 5: number-marked auxiliary
+    - 6: predicate
+
+### Example Item Set
+
+- Condition a :: Grammatical :: Singular subject head
+    - The old key unsurprisingly was rusty from many years of disuse ...
+- Condition b :: Ungrammatical :: Singular subject head
+    - The old key unsurprisingly were rusty from many years of disuse ...
+- Condition c :: Ungrammatical :: Plural subject head
+    - The old keys unsurprisingly was rusty from many years of disuse ...
+- Condition d :: Grammatical :: Plural subject head
+    - The old keys unsurprisingly were rusty from many years of disuse ...
+    
+
+## Experiment 2: Agreement in relative clauses with RC Head Distractor
+
+The design is <span style="font-variant:small-caps;">Grammaticality</span> &times; <span style="font-variant:small-caps;">DistractorNumber</span>. The RC-internal subject is always singular (and thus the grammatical verb is always marked for singular).
+
+- Critical regions:
+    - 2: RC head
+    - 5: Singular RC-internal subject head
+    - 6: Number-marked RC-internal lexical verb
+    - 7-9: Spill-over (various)
+
+### Example Item Set
+
+- Condition c :: Grammatical :: Singular distractor
+    - The publicist who the politician uses during a crisis ... 
+- Condition d :: Ungrammatical :: Singular distractor
+    - The publicist who the politician use during a crisis ...
+- Condition g :: Grammatical :: Plural distractor
+    - The publicists who the politician use during a crisis ...
+- Condition h :: Ungrammatical :: Plural distractor
+    - The publicists who the politician use during a crisis ...
+
+
+## Experiment 3: Agreement in relative clauses with RC Head Distractor
+
+The design is <span style="font-variant:small-caps;">Grammaticality</span> &times; <span style="font-variant:small-caps;">DistractorNumber</span> &times; <span style="font-variant:small-caps;">SubjectNumber</span>. Conditions {c, d, g, h} from Experiment 2 become Conditions {a, b, e, f} in Experiment 3. Conditions {c, d, g, h} below represent the Plural level of <span style="font-variant:small-caps;">SubjectNumber</span>.
+ 
+- Critical regions:
+    - 2: RC head
+    - 5: Singular RC-internal subject head
+    - 6: Number-marked RC-internal lexical verb
+    - 7-8: Spill-over (various)
+
+### Example Item Set
+
+- Condition c :: Grammatical :: Singular distractor
+    - The publicist who the politicians use during a crisis ... 
+- Condition d :: Ungrammatical :: Singular distractor
+    - The publicist who the politicians uses during a crisis ...
+- Condition g :: Grammatical :: Plural distractor
+    - The publicists who the politicians use during a crisis ...
+- Condition h :: Ungrammatical :: Plural distractor
+    - The publicists who the politicians uses during a crisis ...
+
+
+## Experiment 4: Agreement in matrix clauses with In-PP-Modifier Distractor
+
+The design is <span style="font-variant:small-caps;">Grammaticality</span> &times; <span style="font-variant:small-caps;">DistractorNumber</span>.
+
+- Critical regions:
+    - 2: subject head
+    - 5: distractor noun
+    - 6: spill-over adjective
+    - 7: number-marked auxiliary
+    - 8: predicate
+
+### Example Item Set
+ 
+- Condition a :: Grammatical :: Singular distractor
+    - The key to the cell unsurprisingly was rusty ... 
+- Condition b :: Grammatical :: Plural distractor
+    - The key to the cells unsurprisingly was rusty ... 
+- Condition c :: Ungrammatical :: Singular distractor
+    - The key to the cell unsurprisingly were rusty ... 
+- Condition d :: Ungrammatical :: Plural distractor
+    - The key to the cells unsurprisingly were rusty ... 
+
+## Experiment 5: Agreement in matrix clauses with In-PP-Modifier Distractor
+
+The design is <span style="font-variant:small-caps;">Grammaticality</span> &times; <span style="font-variant:small-caps;">DistractorNumber</span>. Experiment 5 differs from Experiment 4 only in that the post-subject adverb was removed.
+
+- Critical regions:
+    - 2: subject head
+    - 5: distractor noun
+    - 6: number-marked auxiliary
+    - 7: predicate
+    
+## Experiment 6: Agreement in matrix clauses with In-PP-Modifier Distractor
+
+The design is <span style="font-variant:small-caps;">DistractorNumber</span>: all sentences are grammatical and all that varies is whether the Within-PP modifier is singular or plural.  The items (and critical regions) are identical to Experiment 4 Conditions A and B.

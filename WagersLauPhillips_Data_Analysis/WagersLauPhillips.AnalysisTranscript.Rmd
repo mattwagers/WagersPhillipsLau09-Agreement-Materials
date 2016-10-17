@@ -192,7 +192,7 @@ with(doi[unstressModel(verb.fm0)[[1]], ],
 
 ## Experiment1 Adverb
 
-Claim (@): Plurals take longer to process, reflected by an effect of complexity on the following region (adverb).
+**Claim**: Plurals take longer to process, reflected by an effect of complexity on the following region (adverb).
 
 ```{r exp1:modelWordRegion_adv, cache=TRUE}
 # Convergence problem with fully-saturated model;

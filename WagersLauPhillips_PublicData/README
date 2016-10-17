@@ -7,7 +7,7 @@ This archive contains reading-time data from the six experiments reported in
 
 The data are stored in six `CSV` files, one each for the correspondingly-numbered experiment in the paper. There is also an `Rdata` file which can be opened directly in the R Environment: it contains six dataframes, named Experiment{1-6}.
 
-The column names are exactly the variables defined by the [Linger](http://tedlab.mit.edu/~dr/Linger/) platform (Version 2.94; Rohde, 2003). Each row corresponds to the reading time for a single region, which in these experiments always corresponded to a word. The reading-time and question-answering data have not been separately collated. If you wish to analyze question-answering accuracy, extract only the trials for Region 1 and compute over the QPCT column.
+The column names are exactly the variables defined by the [Linger](http://tedlab.mit.edu/~dr/Linger/) platform (Version 2.94; Rohde, 2003). Each row corresponds to the reading time for a single region, which in these experiments always corresponded to a word (or a singly-regioned noun-noun compound like `factory_worker`). The reading-time and question-answering data have not been separately collated. If you wish to analyze question-answering accuracy, extract only the trials for Region 1 and compute over the QPCT column.
 
 ## Experiment 1: S-V agreement with no distractors
 
